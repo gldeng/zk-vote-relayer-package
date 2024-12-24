@@ -1,0 +1,44 @@
+{
+    "Serilog": {
+      "Properties": {
+        "Application": "ZkVoteRelayer.HttpApi.Host",
+        "Environment": "Development"
+      },
+      "WriteTo": [
+        {
+          "Name": "Console",
+          "Args": {
+            "formatter": "Serilog.Formatting.Compact.RenderedCompactJsonFormatter, Serilog.Formatting.Compact"
+          }
+        }
+      ]
+    },
+    "App": {
+      "SelfUrl": "https://{{ .Host }}:{{ .Port }}",
+      "CorsOrigins": "*",
+      "RedirectAllowedUrls": ""
+    },
+    "ConnectionStrings": {
+      "Default": "{{ .MongoDbUrl }}ZkVoteRelayer"
+    },
+    "AuthServer": {
+      "Authority": "",
+      "RequireHttpsMetadata": false,
+      "SwaggerClientId": "ZkVoteRelayer_Swagger"
+    },
+    "StringEncryption": {
+      "DefaultPassPhrase": "RpedX3sEVmQ2o9Lm"
+    },
+    "Orleans": {
+      "ClusterId": "ZkVoteRelayerSiloCluster",
+      "ServiceId": "ZkVoteRelayerBasicService",
+      "MongoDBClient": "{{ .MongoDbUrl }}",
+      "DataBase": "ZkVoteRelayerDb"
+    },
+    "OpenTelemetry": {
+      "CollectorEndpoint": "http://localhost:4315",
+      "ServiceName": "ZkVoteRelayer.HttpApi.Host",
+      "ServiceVersion": "1.0.0"
+    }
+  }
+  

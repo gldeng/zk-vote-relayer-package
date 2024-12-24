@@ -1,0 +1,16 @@
+{
+    "ConnectionStrings": {
+      "Default": "{{ .MongoDbUrl}}ZkVoteRelayer"
+    },
+    "Redis": {
+      "Configuration": "{{ .RedisHostPort }}"
+    },
+    "OpenIddict": {
+      "Applications": {
+        "ZkVoteRelayer_Swagger": {
+          "ClientId": "ZkVoteRelayer_Swagger",
+          "RootUrl": "https://localhost:44376"
+        }
+      }
+    }
+}
