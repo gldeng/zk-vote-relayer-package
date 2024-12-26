@@ -8,7 +8,7 @@ def run(
     plan,
     redis_url,
     mongodb_url,
-    api_port=8093
+    api_port=8080
 ):
 
     artifact_name = plan.render_templates(
