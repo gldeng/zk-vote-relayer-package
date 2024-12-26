@@ -1,5 +1,4 @@
-name: github.com/example-org/example-package
+name: github.com/gldeng/zk-vote-relayer-package
 description: |-
-  # github.com/example-org/example-package
-  Enter description Markdown here.
+  Package for relayer of zk vote on aelf
 replace: {}
