@@ -1,5 +1,5 @@
 
-IMAGE_NAME = "gldeng/zkvoterelayer.dbmigrator:sha-39343c5"
+IMAGE_NAME = "gldeng/zkvoterelayer.dbmigrator:sha-0511a8a"
 APPSETTINGS_TEMPLATE_FILE = "/static_files/dbmigrator/appsettings.json.template"
 
 def run(plan, mongodb_url, redis_url):

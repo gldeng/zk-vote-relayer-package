@@ -1,6 +1,6 @@
 SERVICE_NAME = "zk-vote-relayer-silo"
 
-IMAGE_NAME = "gldeng/zkvoterelayer.silo:sha-39343c5"
+IMAGE_NAME = "gldeng/zkvoterelayer.silo:sha-0511a8a"
 
 APPSETTINGS_TEMPLATE_FILE = "/static_files/silo/appsettings.json.template"
 

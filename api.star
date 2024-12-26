@@ -1,6 +1,6 @@
 
 SERVICE_NAME = "zk-vote-relayer-api"
-IMAGE_NAME = "gldeng/zkvoterelayer.httpapi.host:sha-39343c5"
+IMAGE_NAME = "gldeng/zkvoterelayer.httpapi.host:sha-0511a8a"
 STATIC_FILES_DIR = "/static_files/api"
 APPSETTINGS_TEMPLATE_FILE = "{STATIC_FILES_DIR}/appsettings.json.template".format(STATIC_FILES_DIR=STATIC_FILES_DIR)
 
