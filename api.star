@@ -8,7 +8,7 @@ def run(
     plan,
     redis_url,
     mongodb_url,
-    api_port=8080
+    api_port=8020
 ):
 
     artifact_name = plan.render_templates(
@@ -29,8 +29,14 @@ def run(
         ports={
             "http": PortSpec(number=api_port),
         },
+        public_ports={
+            "http": PortSpec(number=api_port),
+        },
         files={
             "/app/config": artifact_name,
+        },
+        env_vars={
+            "ASPNETCORE_URLS": "http://0.0.0.0:{port}".format(port=api_port)
         },
         entrypoint = [
             "/bin/sh", 
